@@ -46,7 +46,7 @@
     "grunt-contrib-watch": "0.x",
     "grunt-saucelabs": "8.x",
     "istanbul": "^0.3.0",
-    "jison": "~0.3.0",
+    "jison": "0.4.8",
     "keen.io": "0.0.3",
     "mocha": "~1.20.0",
     "mustache": "0.x",
