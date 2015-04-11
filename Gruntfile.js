@@ -51,27 +51,6 @@ module.exports = function(grunt) {
           src: ['handlebars*.js'],
           dest: 'dist/'
         }]
-      },
-
-      amd: {
-        type: 'amd',
-        anonymous: true,
-        files: [{
-          expand: true,
-          cwd: 'lib/',
-          src: '**/!(index).js',
-          dest: 'dist/amd/'
-        }]
-      },
-
-      cjs: {
-        type: 'cjs',
-        files: [{
-          expand: true,
-          cwd: 'lib/',
-          src: '**/!(index).js',
-          dest: 'dist/cjs/'
-        }]
       }
     },
     requirejs: {
@@ -174,12 +153,9 @@ module.exports = function(grunt) {
   // Build a new version of the library
   this.registerTask('build', "Builds a distributable version of the current project", [
                     'parser',
-                    'node',
                     'globals',
                     'jshint']);
 
-  this.registerTask('amd', ['packager:amd', 'requirejs']);
-  this.registerTask('node', ['packager:cjs']);
   this.registerTask('globals', ['packager:global']);
   this.registerTask('tests', ['concat:tests']);
 
