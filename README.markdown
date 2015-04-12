@@ -16,7 +16,7 @@ Usage
 
 ```
 
-```js
+```xhtml
 \\ UI Macro: template_example
 {{! <![CDATA[ }}
 <h1>{{heading}}</h1>
@@ -26,7 +26,7 @@ Usage
 {{! ]]> }}
 ```
 
-```
+```xhtml
 \\ UI Macro: partial_textfield
 {{! <![CDATA[ }}
 <div class="form-group">
