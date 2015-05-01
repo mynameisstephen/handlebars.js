@@ -2684,7 +2684,8 @@ var __module13__ = (function(__dependency1__, __dependency2__, __dependency3__) 
   }
   
   function transformLiteralToPath(sexpr) {
-    if (!sexpr.path.parts) {
+    // Service now is treating an empty array as false
+    if (sexpr.path.parts == null) {
       var literal = sexpr.path;
       // Casting to string here to make false and 0 literal values play nicely with the rest
       // of the system.
